@@ -34,6 +34,9 @@ https.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=
 });
 });
 });
-app.listen(3000,function(){
+let port=process.env.PORT;
+if(port==null||port=="")
+port=3000;
+app.listen(port,function(){
   console.log("Success run at port 3000");
 });
